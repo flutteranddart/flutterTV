@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   Color colorB4 = Colors.transparent;
   bool init = false;
 
-  _changeColorB0() {
+  _setDecorationBorderB0() {
     setState(() {
       if (focusNodeB0.hasFocus) {
         colorB0 = Colors.orange;
@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     });
   }
 
-  _changeColorB1() {
+  _setDecorationBorderB1() {
     setState(() {
       if (focusNodeB1.hasFocus) {
         colorB1 = Colors.orange;
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     });
   }
 
-  _changeColorB2() {
+  _setDecorationBorderB2() {
     setState(() {
       if (focusNodeB2.hasFocus) {
         colorB2 = Colors.orange;
@@ -106,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     });
   }
 
-  _changeColorB3() {
+  _setDecorationBorderB3() {
     setState(() {
       if (focusNodeB3.hasFocus) {
         colorB3 = Colors.orange;
@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     });
   }
 
-  _changeColorB4() {
+  _setDecorationBorderB4() {
     setState(() {
       if (focusNodeB4.hasFocus) {
         colorB4 = Colors.orange;
@@ -132,26 +132,26 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     // SystemChrome.setEnabledSystemUIOverlays([]);
     // SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top, SystemUiOverlay.bottom]);
     super.initState();
-    focusNodeB0.addListener(_changeColorB0);
-    focusNodeB1.addListener(_changeColorB1);
-    focusNodeB2.addListener(_changeColorB2);
-    focusNodeB3.addListener(_changeColorB3);
-    focusNodeB4.addListener(_changeColorB4);
+    focusNodeB0.addListener(_setDecorationBorderB0);
+    focusNodeB1.addListener(_setDecorationBorderB1);
+    focusNodeB2.addListener(_setDecorationBorderB2);
+    focusNodeB3.addListener(_setDecorationBorderB3);
+    focusNodeB4.addListener(_setDecorationBorderB4);
   }
 
   @override
   void dispose() {
     super.dispose();
     WidgetsBinding.instance.removeObserver(this);
-    focusNodeB0.removeListener(_changeColorB0);
+    focusNodeB0.removeListener(_setDecorationBorderB0);
     focusNodeB0.dispose();
-    focusNodeB1.removeListener(_changeColorB1);
+    focusNodeB1.removeListener(_setDecorationBorderB1);
     focusNodeB1.dispose();
-    focusNodeB2.removeListener(_changeColorB2);
+    focusNodeB2.removeListener(_setDecorationBorderB2);
     focusNodeB2.dispose();
-    focusNodeB3.removeListener(_changeColorB3);
+    focusNodeB3.removeListener(_setDecorationBorderB3);
     focusNodeB3.dispose();
-    focusNodeB4.removeListener(_changeColorB4);
+    focusNodeB4.removeListener(_setDecorationBorderB4);
     focusNodeB4.dispose();
   }
 
@@ -581,7 +581,7 @@ class BottomWidgetState extends State<BottomWidget>
   Color color4 = Colors.transparent;
   bool init = false;
 
-  _changeColor0() {
+  _setDecorationBorder0() {
     setState(() {
       if (focusNode0.hasFocus) {
         color0 = Colors.orange;
@@ -591,7 +591,7 @@ class BottomWidgetState extends State<BottomWidget>
     });
   }
 
-  _changeColor1() {
+  _setDecorationBorder1() {
     setState(() {
       if (focusNode1.hasFocus) {
         color1 = Colors.orange;
@@ -601,7 +601,7 @@ class BottomWidgetState extends State<BottomWidget>
     });
   }
 
-  _changeColor2() {
+  _setDecorationBorder2() {
     setState(() {
       if (focusNode2.hasFocus) {
         color2 = Colors.orange;
@@ -611,7 +611,7 @@ class BottomWidgetState extends State<BottomWidget>
     });
   }
 
-  _changeColor3() {
+  _setDecorationBorder3() {
     setState(() {
       if (focusNode3.hasFocus) {
         color3 = Colors.orange;
@@ -621,7 +621,7 @@ class BottomWidgetState extends State<BottomWidget>
     });
   }
 
-  _changeColor4() {
+  _setDecorationBorder4() {
     setState(() {
       if (focusNode4.hasFocus) {
         color4 = Colors.orange;
@@ -635,11 +635,11 @@ class BottomWidgetState extends State<BottomWidget>
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    focusNode0.addListener(_changeColor0);
-    focusNode1.addListener(_changeColor1);
-    focusNode2.addListener(_changeColor2);
-    focusNode3.addListener(_changeColor3);
-    focusNode4.addListener(_changeColor4);
+    focusNode0.addListener(_setDecorationBorder0);
+    focusNode1.addListener(_setDecorationBorder1);
+    focusNode2.addListener(_setDecorationBorder2);
+    focusNode3.addListener(_setDecorationBorder3);
+    focusNode4.addListener(_setDecorationBorder4);
     focusNode = focusNode0;
   }
 
@@ -647,15 +647,15 @@ class BottomWidgetState extends State<BottomWidget>
   void dispose() {
     super.dispose();
     WidgetsBinding.instance.removeObserver(this);
-    focusNode0.removeListener(_changeColor0);
+    focusNode0.removeListener(_setDecorationBorder0);
     focusNode0.dispose();
-    focusNode1.removeListener(_changeColor1);
+    focusNode1.removeListener(_setDecorationBorder1);
     focusNode1.dispose();
-    focusNode2.removeListener(_changeColor2);
+    focusNode2.removeListener(_setDecorationBorder2);
     focusNode2.dispose();
-    focusNode3.removeListener(_changeColor3);
+    focusNode3.removeListener(_setDecorationBorder3);
     focusNode3.dispose();
-    focusNode4.removeListener(_changeColor4);
+    focusNode4.removeListener(_setDecorationBorder4);
     focusNode4.dispose();
   }
 
