@@ -13,7 +13,14 @@ Fast to Study Flutter And Dart. QQ群：979966470
 
 ![运行效果](https://raw.githubusercontent.com/flutteranddart/flutterTV/master/Screenshot_1552709275.png)
 
+手机上也可以自动适配：
+
+![手机端运行效果](https://raw.githubusercontent.com/flutteranddart/flutterTV/master/Screenshot_20190316-134026.jpg)
 
 运行视频：https://github.com/flutteranddart/flutterTV/blob/master/device.webm
 
 后续会把用到的一些技术整理成Wiki文档分享下。
+
+APK下载体验地址：https://github.com/flutteranddart/flutterTV/blob/master/app-release.apk?raw=true
+
+
