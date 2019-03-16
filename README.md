@@ -6,10 +6,14 @@ Fast to Study Flutter And Dart. QQ群：979966470
 
 下面为效果图：
 
+![运行效果](https://raw.githubusercontent.com/flutteranddart/flutterTV/master/1552712220873.gif)
+
 ![运行效果](https://raw.githubusercontent.com/flutteranddart/flutterTV/master/Screenshot_1552709352.png)
 
 
 ![运行效果](https://raw.githubusercontent.com/flutteranddart/flutterTV/master/Screenshot_1552709275.png)
 
+
+运行视频：https://github.com/flutteranddart/flutterTV/blob/master/device.webm
 
 后续会把用到的一些技术整理成Wiki文档分享下。
