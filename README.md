@@ -2,6 +2,10 @@
 
 由于Google官方并没有退出TV版Flutter SDK，所以用Flutter尝试编写TV应用，主要是焦点框和焦点的处理，其他的和手机应用差别不大。焦点框和焦点处理比较麻烦，所以Flutter的TV应用开发还不成熟，体验还不错，很流畅，开发成本比较高，还是用原生leanback开发可能要快一些。
 
+【Wiki文档】
+
+[Flutter TV应用的开发尝试](https://github.com/flutteranddart/flutterTV/wiki/Flutter-TV%E5%BA%94%E7%94%A8%E7%9A%84%E5%BC%80%E5%8F%91%E5%B0%9D%E8%AF%95)
+
 Fast to Study Flutter And Dart. QQ群：979966470
 
 下面为效果图：
@@ -20,7 +24,6 @@ Fast to Study Flutter And Dart. QQ群：979966470
 
 运行视频：https://github.com/flutteranddart/flutterTV/blob/master/device.webm
 
-后续会把用到的一些技术整理成Wiki文档分享下。
 
 APK下载体验地址：https://github.com/flutteranddart/flutterTV/blob/master/app-release.apk?raw=true
 
