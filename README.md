@@ -15,7 +15,7 @@ Fast to Study Flutter And Dart. QQ群：979966470
 
 手机上也可以自动适配：
 
-<img style="width:540px;height:960px" src="https://raw.githubusercontent.com/flutteranddart/flutterTV/master/Screenshot_20190316-134026.jpg"  alt="手机端运行效果" align=center />
+<img style="width:54px;height:96px" src="https://raw.githubusercontent.com/flutteranddart/flutterTV/master/Screenshot_20190316-134026.jpg"  alt="手机端运行效果" align=center />
 
 运行视频：https://github.com/flutteranddart/flutterTV/blob/master/device.webm
 
