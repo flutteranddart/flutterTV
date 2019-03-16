@@ -1,3 +1,9 @@
+/*
+ * @Author: Tan Dong 
+ * @Date: 2019-03-16 12:39:05 
+ * @Last Modified by:   Tan Dong 
+ * @Last Modified time: 2019-03-16 12:39:05 
+ */
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -36,6 +42,7 @@ class MyApp extends StatelessWidget {
 const double radius = 30;
 const double padding = 2;
 const double borderWidth = 2;
+double itemWidth = 0;
 FocusNode focusNode = null;
 
 class MyHomePage extends StatefulWidget {
@@ -156,79 +163,11 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+    itemWidth = MediaQuery.of(context).size.width / 3;
     return Scaffold(
       backgroundColor: Color(0xff277188),
       body:
           view1(), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-
-  Widget card1() {
-    return ListView(
-      children: <Widget>[
-        Card(
-          color: Colors.orange,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(16.0),
-              topRight: Radius.circular(16.0),
-              bottomLeft: Radius.circular(16.0),
-              bottomRight: Radius.circular(16.0),
-            ),
-          ),
-          child: Padding(
-            padding: EdgeInsets.all(20),
-            child: Text(
-              'Card',
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Card(
-          elevation: 2,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              const ListTile(
-                leading: Icon(Icons.album),
-                title: Text('The Enchanted Nightingale'),
-                subtitle: Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
-              ),
-              ButtonTheme.bar(
-                // make buttons use the appropriate styles for cards
-                child: ButtonBar(
-                  children: <Widget>[
-                    FlatButton(
-                      child: const Text('BUY TICKETS'),
-                      onPressed: () {/* ... */},
-                    ),
-                    FlatButton(
-                      child: const Text('LISTEN'),
-                      onPressed: () {/* ... */},
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Card(
-          shape: CircleBorder(),
-          child: Padding(
-            padding: EdgeInsets.all(20),
-            child: Text(
-              'Card',
-              textAlign: TextAlign.center,
-            ),
-          ),
-        )
-      ],
     );
   }
 
@@ -336,6 +275,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     return Expanded(
       key: _bodyKey,
       child: Container(
+        margin: EdgeInsets.all(5),
         child: Row(
           children: <Widget>[
             image1(),
@@ -372,6 +312,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                     },
                     child: Expanded(
                         child: Container(
+                      width: itemWidth,
                       decoration: getRectangleDecoration(colorB1),
                       child: Card(
                         shape: RoundedRectangleBorder(
@@ -422,6 +363,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                     child: Expanded(
                         child: Container(
                       decoration: getRectangleDecoration(colorB2),
+                      width: itemWidth,
                       child: Card(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -475,6 +417,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                     },
                     child: Expanded(
                         child: Container(
+                      width: itemWidth,
                       decoration: getRectangleDecoration(colorB3),
                       child: Card(
                         shape: RoundedRectangleBorder(
@@ -524,14 +467,21 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                     },
                     child: Expanded(
                         child: Container(
+                      width: itemWidth,
                       decoration: getRectangleDecoration(colorB4),
-                      child: ClipRRect(
-                        child: Image.asset(
-                          'assets/mgdz.jpg',
-                          fit: BoxFit.cover,
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
                         ),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10),
+                        elevation: 10,
+                        child: ClipRRect(
+                          child: Image.asset(
+                            'assets/mgdz.jpg',
+                            fit: BoxFit.cover,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
                         ),
                       ),
                     )),
@@ -989,6 +939,7 @@ class BottomWidgetState extends State<BottomWidget>
                   print("keyCode: ${rawKeyEventDataAndroid.keyCode}");
                   switch (rawKeyEventDataAndroid.keyCode) {
                     case 19: //KEY_UP
+                      FocusScope.of(context).requestFocus(_focusNode);
                       break;
                     case 20: //KEY_DOWN
                       break;
