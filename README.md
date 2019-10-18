@@ -28,4 +28,3 @@ Fast to Study Flutter And Dart. QQ群：979966470
 APK下载体验地址：https://github.com/flutteranddart/flutterTV/blob/master/app-release.apk?raw=true
 
 
-![Flutter教程](https://img-blog.csdnimg.cn/2019052412022218.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9mYW50YXN5LmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70)
